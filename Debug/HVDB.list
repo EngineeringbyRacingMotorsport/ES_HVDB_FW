@@ -831,10 +831,10 @@ int main(void)
  8000602:	0018      	movs	r0, r3
  8000604:	f7ff fe0c 	bl	8000220 <CAN_Msg_Maker>
 
-	  CAN_Send(&hfdcan1, 0x200, Msg, 2);
+	  CAN_Send(&hfdcan1, 0x400, Msg, 2);
  8000608:	1d3a      	adds	r2, r7, #4
  800060a:	2380      	movs	r3, #128	@ 0x80
- 800060c:	0099      	lsls	r1, r3, #2
+ 800060c:	00d9      	lsls	r1, r3, #3
  800060e:	4804      	ldr	r0, [pc, #16]	@ (8000620 <main+0x8c>)
  8000610:	2302      	movs	r3, #2
  8000612:	f7ff feb4 	bl	800037e <CAN_Send>

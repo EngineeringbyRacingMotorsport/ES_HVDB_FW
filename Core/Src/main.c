@@ -113,7 +113,7 @@ int main(void)
 
 	  CAN_Msg_Maker(&DICCP, Msg);
 
-	  CAN_Send(&hfdcan1, 0x200, Msg, 2);
+	  CAN_Send(&hfdcan1, 0x400, Msg, 2);
 
 	  HAL_Delay(100);
 
