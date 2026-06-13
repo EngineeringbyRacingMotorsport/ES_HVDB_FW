@@ -6,7 +6,7 @@ void CAN_Msg_Maker(DICCP_t *DICCP, uint8_t *Msg)
 	Msg[0] |= ((DICCP->BpTHRbrake   & 0x01) << 0);
 	Msg[0] |= ((DICCP->BpTHRcurrent & 0x01) << 1);
 	Msg[0] |= ((DICCP->BpERRplaus   & 0x01) << 2);
-	Msg[0] |= ((DICCP->BpERRtimer   & 0x01) << 3);
+	Msg[0] |= ((DICCP->DpINTtsalred & 0x01) << 3);
 	Msg[0] |= ((DICCP->BpSDC        & 0x01) << 4);
 
 	Msg[1] |= ((DICCP->DpSDC          & 0x01) << 0);
@@ -14,6 +14,12 @@ void CAN_Msg_Maker(DICCP_t *DICCP, uint8_t *Msg)
 	Msg[1] |= ((DICCP->DpLCHdischarge & 0x01) << 2);
 	Msg[1] |= ((DICCP->DpSDCintlck1   & 0x01) << 3);
 	Msg[1] |= ((DICCP->DpSDCintlck2   & 0x01) << 4);
+
+	Msg[2] |= ((DICCP->BpSHU     & 0x00FF) << 0);
+	Msg[3] |= ((DICCP->BpSHU     & 0xFF00) >> 8);
+
+	Msg[4] |= ((DICCP->DpSHU     & 0x00FF) << 0);
+	Msg[5] |= ((DICCP->DpSHU     & 0xFF00) >> 8);
 }
 
 HAL_StatusTypeDef CAN_Send(FDCAN_HandleTypeDef *hfdcan, uint32_t id, uint8_t *data, uint32_t len) {

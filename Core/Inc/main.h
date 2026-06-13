@@ -57,6 +57,10 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define BfSDC_Pin GPIO_PIN_7
+#define BfSDC_GPIO_Port GPIOB
+#define DfSDC_Pin GPIO_PIN_14
+#define DfSDC_GPIO_Port GPIOC
 #define DfSDCintlck1_Pin GPIO_PIN_15
 #define DfSDCintlck1_GPIO_Port GPIOC
 #define DfSDCintlck2_Pin GPIO_PIN_0
@@ -65,12 +69,12 @@ void Error_Handler(void);
 #define DfLCHdischarge_GPIO_Port GPIOA
 #define DfTHRhv_Pin GPIO_PIN_2
 #define DfTHRhv_GPIO_Port GPIOA
-#define DfSDC_Pin GPIO_PIN_3
-#define DfSDC_GPIO_Port GPIOA
-#define BfSDC_Pin GPIO_PIN_4
-#define BfSDC_GPIO_Port GPIOA
-#define BfERRtimer_Pin GPIO_PIN_5
-#define BfERRtimer_GPIO_Port GPIOA
+#define BfSHU_Pin GPIO_PIN_3
+#define BfSHU_GPIO_Port GPIOA
+#define DfSHU_Pin GPIO_PIN_4
+#define DfSHU_GPIO_Port GPIOA
+#define DfINTtsalred_Pin GPIO_PIN_5
+#define DfINTtsalred_GPIO_Port GPIOA
 #define BfERRplaus_Pin GPIO_PIN_6
 #define BfERRplaus_GPIO_Port GPIOA
 #define BfTHRcurrent_Pin GPIO_PIN_7
@@ -91,11 +95,13 @@ typedef union {
 	uint8_t DfTHRhv;
 	uint8_t DfSDC;
 	uint8_t BfSDC;
-	uint8_t BfERRtimer;
+	uint8_t DfINTtsalred;
 	uint8_t BfERRplaus;
 	uint8_t BfTHRcurrent;
 	uint8_t BfTHRbrake;
 	uint8_t DfSUPled;
+	uint16_t BfSHU;
+	uint16_t DfSHU;
 	};
 } DICCF_t;
 
@@ -106,11 +112,13 @@ typedef struct {
 	uint8_t DpTHRhv;
 	uint8_t DpSDC;
 	uint8_t BpSDC;
-	uint8_t BpERRtimer;
+	uint8_t DpINTtsalred;
 	uint8_t BpERRplaus;
 	uint8_t BpTHRcurrent;
 	uint8_t BpTHRbrake;
 	uint8_t DpSUPled;
+	uint16_t BpSHU;
+	uint16_t DpSHU;
 }DICCP_t;
 /* USER CODE END Private defines */
 

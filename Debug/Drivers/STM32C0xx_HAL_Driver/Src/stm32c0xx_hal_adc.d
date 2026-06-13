@@ -1,4 +1,5 @@
-Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
+Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_adc.o: \
+ ../Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_adc.c \
  ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal.h \
  ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_ll_system.h \
  ../Drivers/CMSIS/Device/ST/STM32C0xx/Include/stm32c0xx.h \
@@ -29,9 +30,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_flash_ex.h \
  ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_pwr.h \
  ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_pwr_ex.h \
- ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_fdcan.h \
- ../Core/Inc/can.h ../Core/Inc/main.h ../Core/Inc/f2p.h
-../Core/Inc/main.h:
+ ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_fdcan.h
 ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal.h:
 ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_ll_system.h:
 ../Drivers/CMSIS/Device/ST/STM32C0xx/Include/stm32c0xx.h:
@@ -63,6 +62,3 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_pwr.h:
 ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_pwr_ex.h:
 ../Drivers/STM32C0xx_HAL_Driver/Inc/stm32c0xx_hal_fdcan.h:
-../Core/Inc/can.h:
-../Core/Inc/main.h:
-../Core/Inc/f2p.h:
