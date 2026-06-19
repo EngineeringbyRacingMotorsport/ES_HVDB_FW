@@ -16,12 +16,12 @@ void DIG2DICCF(DICCF_t *DICCF){
 void DICCF2DICCP(DICCF_t *DICCF, DICCP_t *DICCP) {
 	DICCP->DpSDCintlck1   = DICCF->DfSDCintlck1  ;
 	DICCP->DpSDCintlck2   = DICCF->DfSDCintlck2  ;
-	DICCP->DpLCHdischarge = DICCF->DfLCHdischarge;
+	DICCP->DpLCHdischarge = !DICCF->DfLCHdischarge;
 	DICCP->DpTHRhv        = DICCF->DfTHRhv       ;
 	DICCP->DpSDC          = DICCF->DfSDC         ;
-	DICCP->BpSDC          = DICCF->BfSDC         ;
-	DICCP->DpINTtsalred   = DICCF->DfINTtsalred  ;
-	DICCP->BpERRplaus     = DICCF->BfERRplaus    ;
+	DICCP->BpSDC          = !DICCF->BfSDC         ;
+	DICCP->DpINTtsalred   = !DICCF->DfINTtsalred  ;
+	DICCP->BpERRplaus     = !DICCF->BfERRplaus    ;
 	DICCP->BpTHRcurrent   = DICCF->BfTHRcurrent  ;
 	DICCP->BpTHRbrake     = DICCF->BfTHRbrake    ;
 };

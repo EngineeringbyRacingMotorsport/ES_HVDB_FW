@@ -75,10 +75,10 @@ void Error_Handler(void);
 #define DfSHU_GPIO_Port GPIOA
 #define DfINTtsalred_Pin GPIO_PIN_5
 #define DfINTtsalred_GPIO_Port GPIOA
-#define BfERRplaus_Pin GPIO_PIN_6
-#define BfERRplaus_GPIO_Port GPIOA
-#define BfTHRcurrent_Pin GPIO_PIN_7
+#define BfTHRcurrent_Pin GPIO_PIN_6
 #define BfTHRcurrent_GPIO_Port GPIOA
+#define BfERRplaus_Pin GPIO_PIN_7
+#define BfERRplaus_GPIO_Port GPIOA
 #define BfTHRbrake_Pin GPIO_PIN_0
 #define BfTHRbrake_GPIO_Port GPIOB
 #define DfSUPled_Pin GPIO_PIN_6

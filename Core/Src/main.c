@@ -304,9 +304,9 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pins : DfSDCintlck2_Pin DfLCHdischarge_Pin DfTHRhv_Pin DfINTtsalred_Pin
-                           BfERRplaus_Pin BfTHRcurrent_Pin */
+                           BfTHRcurrent_Pin BfERRplaus_Pin */
   GPIO_InitStruct.Pin = DfSDCintlck2_Pin|DfLCHdischarge_Pin|DfTHRhv_Pin|DfINTtsalred_Pin
-                          |BfERRplaus_Pin|BfTHRcurrent_Pin;
+                          |BfTHRcurrent_Pin|BfERRplaus_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
