@@ -1,8 +1,8 @@
 #include <f2p.h>
 
 void DMA2DICCF(DICCF_t *DICCF, uint32_t *buffer){
-	DICCF->BpSHU = buffer[0];
-	DICCF->DpSHU = buffer[1];
+	DICCF->BfSHU = buffer[0];
+	DICCF->DfSHU = buffer[1];
 }
 
 void DIG2DICCF(DICCF_t *DICCF){
