@@ -29,8 +29,8 @@ void DICCF2DICCP(DICCF_t *DICCF, DICCP_t *DICCP) {
 	DICCP->BpERRplaus     = !DICCF->BfERRplaus    ;
 	DICCP->BpTHRcurrent   = DICCF->BfTHRcurrent  ;
 	DICCP->BpTHRbrake     = DICCF->BfTHRbrake    ;
-	DICCP->BpSHU		  = ((DICCF->BfSHU*3.3)/4095)/(0.130*100)		;
-	DICCP->DpSHU		  = ((DICCF->DfSHU*3.3)/4095)/(0.130*100)		;
+	DICCP->BpSHU		  = ((DICCF->BfSHU*3.3)/4095)/(0.130*100)*1000		;
+	DICCP->DpSHU		  = ((DICCF->DfSHU*3.3)/4095)/(0.130*100)*1000		;
 };
 
 
