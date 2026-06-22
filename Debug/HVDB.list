@@ -37,15 +37,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  000158e9  00000000  00000000  0001247c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000ae06  00000000  00000000  00027d65  2**0
+ 17 .debug_line   0000adfe  00000000  00000000  00027d65  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000882df  00000000  00000000  00032b6b  2**0
+ 18 .debug_str    000882df  00000000  00000000  00032b63  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  000bae4a  2**0
+ 19 .comment      00000043  00000000  00000000  000bae42  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  0000223c  00000000  00000000  000bae90  2**2
+ 20 .debug_frame  0000223c  00000000  00000000  000bae88  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 00000046  00000000  00000000  000bd0cc  2**0
+ 21 .debug_line_str 00000046  00000000  00000000  000bd0c4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -3700,7 +3700,7 @@ void DIG2DICCF(DICCF_t *DICCF){
  8001cfe:	b082      	sub	sp, #8
  8001d00:	af00      	add	r7, sp, #0
  8001d02:	6078      	str	r0, [r7, #4]
-	DICCF->DfSDCintlck1   = HAL_GPIO_ReadPin(GPIOC, DfSDCintlck1_Pin  );
+	DICCF->DfSDCintlck1 = HAL_GPIO_ReadPin(GPIOC, DfSDCintlck1_Pin);
  8001d04:	2380      	movs	r3, #128	@ 0x80
  8001d06:	021b      	lsls	r3, r3, #8
  8001d08:	4a32      	ldr	r2, [pc, #200]	@ (8001dd4 <DIG2DICCF+0xd8>)
@@ -3711,7 +3711,7 @@ void DIG2DICCF(DICCF_t *DICCF){
  8001d14:	001a      	movs	r2, r3
  8001d16:	687b      	ldr	r3, [r7, #4]
  8001d18:	701a      	strb	r2, [r3, #0]
-	DICCF->DfSDCintlck2   = HAL_GPIO_ReadPin(GPIOA, DfSDCintlck2_Pin  );
+	DICCF->DfSDCintlck2 = HAL_GPIO_ReadPin(GPIOA, DfSDCintlck2_Pin);
  8001d1a:	23a0      	movs	r3, #160	@ 0xa0
  8001d1c:	05db      	lsls	r3, r3, #23
  8001d1e:	2101      	movs	r1, #1
@@ -3731,7 +3731,7 @@ void DIG2DICCF(DICCF_t *DICCF){
  8001d3c:	001a      	movs	r2, r3
  8001d3e:	687b      	ldr	r3, [r7, #4]
  8001d40:	709a      	strb	r2, [r3, #2]
-	DICCF->DfTHRhv        = HAL_GPIO_ReadPin(GPIOA, DfTHRhv_Pin       );
+	DICCF->DfTHRhv = HAL_GPIO_ReadPin(GPIOA, DfTHRhv_Pin);
  8001d42:	23a0      	movs	r3, #160	@ 0xa0
  8001d44:	05db      	lsls	r3, r3, #23
  8001d46:	2104      	movs	r1, #4
@@ -3741,7 +3741,7 @@ void DIG2DICCF(DICCF_t *DICCF){
  8001d50:	001a      	movs	r2, r3
  8001d52:	687b      	ldr	r3, [r7, #4]
  8001d54:	70da      	strb	r2, [r3, #3]
-	DICCF->DfSDC          = HAL_GPIO_ReadPin(GPIOC, DfSDC_Pin         );
+	DICCF->DfSDC = HAL_GPIO_ReadPin(GPIOC, DfSDC_Pin);
  8001d56:	2380      	movs	r3, #128	@ 0x80
  8001d58:	01db      	lsls	r3, r3, #7
  8001d5a:	4a1e      	ldr	r2, [pc, #120]	@ (8001dd4 <DIG2DICCF+0xd8>)
@@ -3752,7 +3752,7 @@ void DIG2DICCF(DICCF_t *DICCF){
  8001d66:	001a      	movs	r2, r3
  8001d68:	687b      	ldr	r3, [r7, #4]
  8001d6a:	711a      	strb	r2, [r3, #4]
-	DICCF->BfSDC          = HAL_GPIO_ReadPin(GPIOB, BfSDC_Pin         );
+	DICCF->BfSDC = HAL_GPIO_ReadPin(GPIOB, BfSDC_Pin);
  8001d6c:	4b1a      	ldr	r3, [pc, #104]	@ (8001dd8 <DIG2DICCF+0xdc>)
  8001d6e:	2180      	movs	r1, #128	@ 0x80
  8001d70:	0018      	movs	r0, r3
@@ -3761,7 +3761,7 @@ void DIG2DICCF(DICCF_t *DICCF){
  8001d78:	001a      	movs	r2, r3
  8001d7a:	687b      	ldr	r3, [r7, #4]
  8001d7c:	715a      	strb	r2, [r3, #5]
-	DICCF->DfINTtsalred   = HAL_GPIO_ReadPin(GPIOA, DfINTtsalred_Pin  );
+	DICCF->DfINTtsalred = HAL_GPIO_ReadPin(GPIOA, DfINTtsalred_Pin);
  8001d7e:	23a0      	movs	r3, #160	@ 0xa0
  8001d80:	05db      	lsls	r3, r3, #23
  8001d82:	2120      	movs	r1, #32
@@ -3771,7 +3771,7 @@ void DIG2DICCF(DICCF_t *DICCF){
  8001d8c:	001a      	movs	r2, r3
  8001d8e:	687b      	ldr	r3, [r7, #4]
  8001d90:	719a      	strb	r2, [r3, #6]
-	DICCF->BfERRplaus     = HAL_GPIO_ReadPin(GPIOA, BfERRplaus_Pin    );
+	DICCF->BfERRplaus = HAL_GPIO_ReadPin(GPIOA, BfERRplaus_Pin);
  8001d92:	23a0      	movs	r3, #160	@ 0xa0
  8001d94:	05db      	lsls	r3, r3, #23
  8001d96:	2180      	movs	r1, #128	@ 0x80
@@ -3781,7 +3781,7 @@ void DIG2DICCF(DICCF_t *DICCF){
  8001da0:	001a      	movs	r2, r3
  8001da2:	687b      	ldr	r3, [r7, #4]
  8001da4:	71da      	strb	r2, [r3, #7]
-	DICCF->BfTHRcurrent   = HAL_GPIO_ReadPin(GPIOA, BfTHRcurrent_Pin  );
+	DICCF->BfTHRcurrent = HAL_GPIO_ReadPin(GPIOA, BfTHRcurrent_Pin);
  8001da6:	23a0      	movs	r3, #160	@ 0xa0
  8001da8:	05db      	lsls	r3, r3, #23
  8001daa:	2140      	movs	r1, #64	@ 0x40
@@ -3791,7 +3791,7 @@ void DIG2DICCF(DICCF_t *DICCF){
  8001db4:	001a      	movs	r2, r3
  8001db6:	687b      	ldr	r3, [r7, #4]
  8001db8:	721a      	strb	r2, [r3, #8]
-	DICCF->BfTHRbrake     = HAL_GPIO_ReadPin(GPIOB, BfTHRbrake_Pin    );
+	DICCF->BfTHRbrake = HAL_GPIO_ReadPin(GPIOB, BfTHRbrake_Pin);
  8001dba:	4b07      	ldr	r3, [pc, #28]	@ (8001dd8 <DIG2DICCF+0xdc>)
  8001dbc:	2101      	movs	r1, #1
  8001dbe:	0018      	movs	r0, r3
@@ -3816,12 +3816,12 @@ void DICCF2DICCP(DICCF_t *DICCF, DICCP_t *DICCP) {
  8001de0:	af00      	add	r7, sp, #0
  8001de2:	6078      	str	r0, [r7, #4]
  8001de4:	6039      	str	r1, [r7, #0]
-	DICCP->DpSDCintlck1   = DICCF->DfSDCintlck1  ;
+	DICCP->DpSDCintlck1 = DICCF->DfSDCintlck1;
  8001de6:	687b      	ldr	r3, [r7, #4]
  8001de8:	781a      	ldrb	r2, [r3, #0]
  8001dea:	683b      	ldr	r3, [r7, #0]
  8001dec:	701a      	strb	r2, [r3, #0]
-	DICCP->DpSDCintlck2   = DICCF->DfSDCintlck2  ;
+	DICCP->DpSDCintlck2 = DICCF->DfSDCintlck2;
  8001dee:	687b      	ldr	r3, [r7, #4]
  8001df0:	785a      	ldrb	r2, [r3, #1]
  8001df2:	683b      	ldr	r3, [r7, #0]
@@ -3835,17 +3835,17 @@ void DICCF2DICCP(DICCF_t *DICCF, DICCP_t *DICCP) {
  8001e00:	001a      	movs	r2, r3
  8001e02:	683b      	ldr	r3, [r7, #0]
  8001e04:	709a      	strb	r2, [r3, #2]
-	DICCP->DpTHRhv        = DICCF->DfTHRhv       ;
+	DICCP->DpTHRhv = DICCF->DfTHRhv;
  8001e06:	687b      	ldr	r3, [r7, #4]
  8001e08:	78da      	ldrb	r2, [r3, #3]
  8001e0a:	683b      	ldr	r3, [r7, #0]
  8001e0c:	70da      	strb	r2, [r3, #3]
-	DICCP->DpSDC          = DICCF->DfSDC         ;
+	DICCP->DpSDC = DICCF->DfSDC;
  8001e0e:	687b      	ldr	r3, [r7, #4]
  8001e10:	791a      	ldrb	r2, [r3, #4]
  8001e12:	683b      	ldr	r3, [r7, #0]
  8001e14:	711a      	strb	r2, [r3, #4]
-	DICCP->BpSDC          = !DICCF->BfSDC         ;
+	DICCP->BpSDC = !DICCF->BfSDC;
  8001e16:	687b      	ldr	r3, [r7, #4]
  8001e18:	795b      	ldrb	r3, [r3, #5]
  8001e1a:	425a      	negs	r2, r3
@@ -3854,7 +3854,7 @@ void DICCF2DICCP(DICCF_t *DICCF, DICCP_t *DICCP) {
  8001e20:	001a      	movs	r2, r3
  8001e22:	683b      	ldr	r3, [r7, #0]
  8001e24:	715a      	strb	r2, [r3, #5]
-	DICCP->DpINTtsalred   = !DICCF->DfINTtsalred  ;
+	DICCP->DpINTtsalred = !DICCF->DfINTtsalred;
  8001e26:	687b      	ldr	r3, [r7, #4]
  8001e28:	799b      	ldrb	r3, [r3, #6]
  8001e2a:	425a      	negs	r2, r3
@@ -3863,7 +3863,7 @@ void DICCF2DICCP(DICCF_t *DICCF, DICCP_t *DICCP) {
  8001e30:	001a      	movs	r2, r3
  8001e32:	683b      	ldr	r3, [r7, #0]
  8001e34:	719a      	strb	r2, [r3, #6]
-	DICCP->BpERRplaus     = !DICCF->BfERRplaus    ;
+	DICCP->BpERRplaus = !DICCF->BfERRplaus;
  8001e36:	687b      	ldr	r3, [r7, #4]
  8001e38:	79db      	ldrb	r3, [r3, #7]
  8001e3a:	425a      	negs	r2, r3
@@ -3872,17 +3872,17 @@ void DICCF2DICCP(DICCF_t *DICCF, DICCP_t *DICCP) {
  8001e40:	001a      	movs	r2, r3
  8001e42:	683b      	ldr	r3, [r7, #0]
  8001e44:	71da      	strb	r2, [r3, #7]
-	DICCP->BpTHRcurrent   = DICCF->BfTHRcurrent  ;
+	DICCP->BpTHRcurrent = DICCF->BfTHRcurrent;
  8001e46:	687b      	ldr	r3, [r7, #4]
  8001e48:	7a1a      	ldrb	r2, [r3, #8]
  8001e4a:	683b      	ldr	r3, [r7, #0]
  8001e4c:	721a      	strb	r2, [r3, #8]
-	DICCP->BpTHRbrake     = DICCF->BfTHRbrake    ;
+	DICCP->BpTHRbrake = DICCF->BfTHRbrake;
  8001e4e:	687b      	ldr	r3, [r7, #4]
  8001e50:	7a5a      	ldrb	r2, [r3, #9]
  8001e52:	683b      	ldr	r3, [r7, #0]
  8001e54:	725a      	strb	r2, [r3, #9]
-	DICCP->BpSHU		  = ((DICCF->BfSHU*3.3)/4095)/(0.130*100)*1000		;
+	DICCP->BpSHU = ((DICCF->BfSHU*3.3)/4095)/(0.130*100)*1000;
  8001e56:	687b      	ldr	r3, [r7, #4]
  8001e58:	899b      	ldrh	r3, [r3, #12]
  8001e5a:	0018      	movs	r0, r3
@@ -3920,7 +3920,7 @@ void DICCF2DICCP(DICCF_t *DICCF, DICCP_t *DICCP) {
  8001ea6:	b29a      	uxth	r2, r3
  8001ea8:	683b      	ldr	r3, [r7, #0]
  8001eaa:	819a      	strh	r2, [r3, #12]
-	DICCP->DpSHU		  = ((DICCF->DfSHU*3.3)/4095)/(0.130*100)*1000		;
+	DICCP->DpSHU = ((DICCF->DfSHU*3.3)/4095)/(0.130*100)*1000;
  8001eac:	687b      	ldr	r3, [r7, #4]
  8001eae:	89db      	ldrh	r3, [r3, #14]
  8001eb0:	0018      	movs	r0, r3

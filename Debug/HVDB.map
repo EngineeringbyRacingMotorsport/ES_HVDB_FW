@@ -3658,22 +3658,22 @@ LOAD C:/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x000154f3      0x20a ./Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_rcc.o
  .debug_macro   0x000156fd      0x1ec ./Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_rcc_ex.o
 
-.debug_line     0x00000000     0xae06
+.debug_line     0x00000000     0xadfe
  .debug_line    0x00000000      0x8c5 ./Core/Src/can.o
- .debug_line    0x000008c5      0x866 ./Core/Src/f2p.o
- .debug_line    0x0000112b      0x968 ./Core/Src/main.o
- .debug_line    0x00001a93      0x85c ./Core/Src/stm32c0xx_hal_msp.o
- .debug_line    0x000022ef      0x7e4 ./Core/Src/stm32c0xx_it.o
- .debug_line    0x00002ad3      0x7cc ./Core/Src/system_stm32c0xx.o
- .debug_line    0x0000329f       0x7d ./Core/Startup/startup_stm32c092fcpx.o
- .debug_line    0x0000331c      0xaa6 ./Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal.o
- .debug_line    0x00003dc2     0x19e7 ./Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_adc.o
- .debug_line    0x000057a9      0xbc1 ./Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_cortex.o
- .debug_line    0x0000636a      0xdae ./Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_dma.o
- .debug_line    0x00007118     0x18e1 ./Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_fdcan.o
- .debug_line    0x000089f9      0xbbe ./Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_gpio.o
- .debug_line    0x000095b7      0xddc ./Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_rcc.o
- .debug_line    0x0000a393      0xa73 ./Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_rcc_ex.o
+ .debug_line    0x000008c5      0x85e ./Core/Src/f2p.o
+ .debug_line    0x00001123      0x968 ./Core/Src/main.o
+ .debug_line    0x00001a8b      0x85c ./Core/Src/stm32c0xx_hal_msp.o
+ .debug_line    0x000022e7      0x7e4 ./Core/Src/stm32c0xx_it.o
+ .debug_line    0x00002acb      0x7cc ./Core/Src/system_stm32c0xx.o
+ .debug_line    0x00003297       0x7d ./Core/Startup/startup_stm32c092fcpx.o
+ .debug_line    0x00003314      0xaa6 ./Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal.o
+ .debug_line    0x00003dba     0x19e7 ./Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_adc.o
+ .debug_line    0x000057a1      0xbc1 ./Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_cortex.o
+ .debug_line    0x00006362      0xdae ./Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_dma.o
+ .debug_line    0x00007110     0x18e1 ./Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_fdcan.o
+ .debug_line    0x000089f1      0xbbe ./Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_gpio.o
+ .debug_line    0x000095af      0xddc ./Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_rcc.o
+ .debug_line    0x0000a38b      0xa73 ./Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_hal_rcc_ex.o
 
 .debug_str      0x00000000    0x882df
  .debug_str     0x00000000    0x882df ./Core/Src/can.o

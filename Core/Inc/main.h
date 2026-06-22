@@ -85,10 +85,7 @@ void Error_Handler(void);
 #define DfSUPled_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
-typedef union {
-	uint8_t array[12];
-	struct{
-	/* ================ MISSATGE 1 ================ */
+typedef struct {
 	uint8_t DfSDCintlck1;
 	uint8_t DfSDCintlck2;
 	uint8_t DfLCHdischarge;
@@ -102,7 +99,6 @@ typedef union {
 	uint8_t DfSUPled;
 	uint16_t BfSHU;
 	uint16_t DfSHU;
-	};
 } DICCF_t;
 
 typedef struct {
